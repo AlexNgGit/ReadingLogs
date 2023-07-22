@@ -1,0 +1,270 @@
+body {
+    display: block;
+    background-color: lightblue;
+}
+
+#MainDiv {
+    margin-top: 5rem;
+    padding: 1rem;
+    display: grid;
+    height: 80%;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 0.5rem;
+}
+
+#LeftDiv {
+    position: sticky;
+    display: block;
+}
+
+#RightDiv {
+    display: grid;
+    grid-template-rows: 8% 5% auto auto;
+}
+
+.mainForm {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    border: solid black ;
+    border-radius: 1.5rem;
+    background-color:#F1D6EE;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+#title{
+    margin: auto;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+#titleLabel{
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#author{
+    margin: auto;
+    display: block;
+    line-height: 2rem;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+#authorLabel{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#description{
+    margin: auto;
+    display: block;
+    line-height: 2rem;
+    width: 90%;
+    word-wrap: break-word;
+
+}
+
+#descriptionLabel{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#quantity{
+    margin: auto;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    word-wrap: break-word;
+}
+#quantityLabel{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#imageLink{
+    margin: auto;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    word-break: break-all;
+}
+
+#imageLinksLabel{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#ISBN{
+    margin: auto;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    word-break: break-all;
+}
+
+#ISBNLabel{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#inputButton{
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    background-color: lightpink;
+    font-weight: bolder;
+    text-align: center;
+    font-size: large;
+}
+
+.DeleteAllButton{
+    argin: auto;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    padding-top: 1rem;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    background-color: lightpink;
+    font-weight: bolder;
+    text-align: center;
+    font-size: large;
+    border-radius: 1rem;
+}
+
+.DownloadAll{
+    argin: auto;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    padding-top: 1rem;
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    width: 90%;
+    background-color: lightpink;
+    font-weight: bolder;
+    text-align: center;
+    font-size: large;
+    border-radius: 1rem;
+}
+
+.DisplayPanel {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border: solid;
+    display: grid;
+}
+
+.Card {
+    display: block;
+    text-align: justify;
+    border-bottom: solid black;
+    background-color: white;
+    position: relative;
+}
+.MainCard {
+    z-index: 0;
+}
+
+#DetailedView {
+    border:  solid thick blue;
+    overflow-wrap: break-word;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    left: -10px;
+    top: 11px;
+    width: 400px;
+    height: 300px;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    overflow: scroll;
+}
+#hideDetailed {
+    width: fit-content;
+    height: fit-content;
+}
+#viewPara {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#viewParaP{
+    font-size: large;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+}
+
+.CardImage {
+    float: left;
+    margin: 5px;
+    max-height: 400px;
+    max-width: 200px;
+}
+
+.TransitioningButton {
+    display: grid;
+    grid-template-columns: minmax(0, 50%) minmax(0, 50%);
+}
+
+#NextButton, #PrevButton {
+    margin-top: 1rem;
+    border-radius: 2rem;
+    background-color: #F1D6EE;
+    font-weight: bold;
+    font-size: large;
+}
+
+.DisplayHeader {
+    display: grid;
+    grid-template-columns: minmax(0, 33.33%) minmax(0, 33.33%) minmax(0, 33.33%);
+    overflow: hidden;
+    justify-content: space-between;
+    grid-template-rows: auto;
+    border-radius: 0.2rem;
+}
+.DisplayHeader  > * {
+    text-decoration-color: blue;
+    text-align: center;
+    border-radius: 2rem;
+    font-weight: bolder;
+    border: solid coral;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    background-color: lightpink;
+}
