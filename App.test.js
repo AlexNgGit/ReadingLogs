@@ -1,6 +1,6 @@
 const {MongoClient} = require("mongodb");
 
-describe("get/add/delete data test", function () {
+describe("get/add/delete/filter data test", function () {
     //////
     let initArr = []
     const MONGO_URI = "mongodb+srv://Cluster20727:VGdcdHZMRkpo@cluster20727.trwcf2z.mongodb.net/bookDB?retryWrites=true&w=majority";
@@ -72,20 +72,28 @@ describe("get/add/delete data test", function () {
         }
     })
 
-    /*test("filter data", async function() {
-        initArr.pop()
+    test("filter data", async function() {
+        let response =  await fetch("https://bookinv.onrender.com/search", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ISBN: "NA210Test"})
+        })
+
         try {
             if (response.status === 200) {
+                response = await response.json()
                 let result = await clientTest.db("bookDB").collection("books").
                 find({ISBN: "NA210Test"},   {projection:{ _id: 0 }}).toArray();
-                expect(result).toEqual(addItem)
+                expect(result).toEqual(response)
             }
         } catch (error) {
             console.log(error.message)
             fail("should not reach here");
 
         }
-    })*/
+    })
 
     test("delete data", async function() {
         initArr.pop()
