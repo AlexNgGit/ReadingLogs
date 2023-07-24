@@ -78,7 +78,7 @@ describe("get/add/delete data test", function () {
             if (response.status === 200) {
                 let result = await clientTest.db("bookDB").collection("books").
                 find({ISBN: "NA210Test"},   {projection:{ _id: 0 }}).toArray();
-                expect(result).toEqual(initArr)
+                expect(result).toEqual(addItem)
             }
         } catch (error) {
             console.log(error.message)

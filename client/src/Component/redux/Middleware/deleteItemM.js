@@ -5,7 +5,7 @@ export function deleteItemM(payload) {
         try {
             let ISBN = payload.ISBN
             console.log(payload)
-            let response = await fetch("https://alexcpsc455.onrender.com/delete/"+ISBN, {
+            let response = await fetch("https://bookinv.onrender.com/delete/"+ISBN, {
                 method: "DELETE",
             })
             if (response.status === 200) {
