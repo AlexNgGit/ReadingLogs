@@ -4,7 +4,7 @@ export function addNewItemsM(payload) {
     return async (dispatch, getState) => {
         try {
             console.log(payload)
-            let response =  await fetch("https://alexcpsc455.onrender.com/add", {
+            let response =  await fetch("https://bookinv.onrender.com/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -12,7 +12,7 @@ export function Page() {
         JSON.parse(currPage.itemsReducer.
             inventory.PageCollection[currPage.itemsReducer.displayStatus.currPageIdx - 1]).childCard
     async function getInitialData () {
-            let response = await fetch("https://alexcpsc455.onrender.com/", {
+            let response = await fetch("https://bookinv.onrender.com/", {
                 method: "GET"
             })
             let result = await response.json()

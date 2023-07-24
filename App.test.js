@@ -1,7 +1,7 @@
 const {MongoClient} = require("mongodb");
 
 describe("get/add/delete data test", function () {
-    ////
+    //////
     let initArr = []
     const MONGO_URI = "mongodb+srv://Cluster20727:VGdcdHZMRkpo@cluster20727.trwcf2z.mongodb.net/bookDB?retryWrites=true&w=majority";
     const clientTest = new MongoClient(MONGO_URI);
@@ -29,7 +29,7 @@ describe("get/add/delete data test", function () {
 
     test("get initial data", async function() {
         try {
-            let response = await fetch("https://alexcpsc455.onrender.com/", {
+            let response = await fetch("https://bookinv.onrender.com/", {
                 method: "GET"
             })
             let result = await response.json()
@@ -46,7 +46,7 @@ describe("get/add/delete data test", function () {
             find({},   {projection:{ _id: 0 }}).toArray()
             let initLength = testArr.length;
 
-            let response =  await fetch("https://alexcpsc455.onrender.com/add", {
+            let response =  await fetch("https://bookinv.onrender.com/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -78,7 +78,7 @@ describe("get/add/delete data test", function () {
             if (response.status === 200) {
                 let result = await clientTest.db("bookDB").collection("books").
                 find({ISBN: "NA210Test"},   {projection:{ _id: 0 }}).toArray();
-                expect(result).toEqual(initArr)
+                expect(result).toEqual(addItem)
             }
         } catch (error) {
             console.log(error.message)
@@ -91,7 +91,7 @@ describe("get/add/delete data test", function () {
         initArr.pop()
         try {
             let ISBN = "NA210Test"
-            let response = await fetch("https://alexcpsc455.onrender.com/delete/"+ISBN, {
+            let response = await fetch("https://bookinv.onrender.com/delete/"+ISBN, {
                 method: "DELETE",
             })
             if (response.status === 200) {

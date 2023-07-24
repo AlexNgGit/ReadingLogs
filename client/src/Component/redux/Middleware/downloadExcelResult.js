@@ -3,7 +3,7 @@ import {downloadActions} from "../Actions/downloadActions";
 export function downloadExcelResult(payload) {
     return async (dispatch, getState) => {
         try {
-            let response = await fetch("https://cpsc455alex.onrender.com/download", {
+            let response = await fetch("https://bookinv.onrender.com/download", {
                 method: "PUT",
             });
             let blob = await response.blob();
