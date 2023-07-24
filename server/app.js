@@ -12,8 +12,9 @@ var localItem = require('./src/controller/inventoryStorage');
 const bodyParser = require("express");
 var app = express();
 require('dotenv').config();
+
 const corsOptions = {
-    origin: "https://bookinvfe.onrender.com/" // frontend URI (ReactJS)
+    origin: "https://bookinvfe.onrender.com"// frontend URI (ReactJS)
 }
 
 const PORT = process.env.PORT || 8000
