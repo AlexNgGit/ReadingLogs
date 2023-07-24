@@ -29,7 +29,7 @@ describe("get/add/delete data test", function () {
 
     test("get initial data", async function() {
         try {
-            let response = await fetch("https://alexcpsc455.onrender.com/", {
+            let response = await fetch("https://bookinv.onrender.com/", {
                 method: "GET"
             })
             let result = await response.json()
@@ -46,7 +46,7 @@ describe("get/add/delete data test", function () {
             find({},   {projection:{ _id: 0 }}).toArray()
             let initLength = testArr.length;
 
-            let response =  await fetch("https://alexcpsc455.onrender.com/add", {
+            let response =  await fetch("https://bookinv.onrender.com/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -91,7 +91,7 @@ describe("get/add/delete data test", function () {
         initArr.pop()
         try {
             let ISBN = "NA210Test"
-            let response = await fetch("https://alexcpsc455.onrender.com/delete/"+ISBN, {
+            let response = await fetch("https://bookinv.onrender.com/delete/"+ISBN, {
                 method: "DELETE",
             })
             if (response.status === 200) {
