@@ -1,5 +1,5 @@
 import {useDispatch} from "react-redux";
-import {deleteItemM} from "../../../../../../../../redux/Middleware/deleteItemM";
+import {deleteItemM} from "../../../../../../../../redux/Thunk/deleteItemM";
 
 export function DeleteIndiCardButton({prop}) {
     const dispatch = useDispatch()

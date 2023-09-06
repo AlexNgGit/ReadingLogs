@@ -4,7 +4,7 @@ import {field} from "../Fields/fields";
 import {numericalMatches} from "../NumericalComparision/numericalComparision";
 import {logicMatches} from "../LogicComparision/logicComparsion";
 import {useDispatch} from "react-redux";
-import {filterItem} from "../../../../redux/Middleware/filterItemM";
+import {filterItem} from "../../../../../redux/Thunk/filterItemM";
 
 
 export function SearchBar() {

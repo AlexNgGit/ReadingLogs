@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {downloadExcelResult} from "../../../../redux/Middleware/downloadExcelResult";
+import {downloadExcelResult} from "../../../../redux/Thunk/downloadExcelResult";
 
 export function DownloadAnchor() {
     const dispatch = useDispatch()

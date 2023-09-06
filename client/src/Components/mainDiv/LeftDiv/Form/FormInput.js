@@ -1,9 +1,9 @@
 import {useEffect, useRef} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addItem} from "../../../../redux/Actions/itemsActions";
-import {googleBookFunc} from "../../../../redux/Middleware/GoogleBookFetch";
+import {googleBookFunc} from "../../../../redux/Thunk/GoogleBookFetch";
 import {TitleOptionsList} from "./TitleOptionsList";
-import {addNewItemsM} from "../../../../redux/Middleware/addNewItemsM";
+import {addNewItemsM} from "../../../../redux/Thunk/addNewItemsM";
 
 export function InputForm() {
   const formRef = useRef();
