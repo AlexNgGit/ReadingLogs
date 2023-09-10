@@ -1,12 +1,16 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Home} from "./Components/Home/Home";
 import ErrorPage from "./Components/RouteError/RouteError";
-import React from "react";
+import React, {useEffect} from "react";
 import {RouteString} from "./RouteString/RouteString";
-import {LogBooks} from "./Components/LogBooks/LogBooks";
+import {ExistingBooks} from "./Components/Event/LogBooks/FindBook/ExistingBook/ExistingBooks";
+import {AddNewBook} from "./Components/Event/LogBooks/FindBook/AddNewBook/AddNewBook";
+import {LogEvents} from "./Components/Event/LogEvents";
+import {HTML5Backend} from "react-dnd-html5-backend";
+import {DndProvider} from "react-dnd";
 
 export function App() {
-    /*let url = "https://www.google.com/books/jsapi.js";
+    let url = "https://www.google.com/books/jsapi.js";
 
     function loadGoogleBook () {
         if (window.google.books.hasOwnProperty("load")) {
@@ -23,7 +27,9 @@ export function App() {
         return () => {
             document.head.removeChild(script);
         };
-    },[])*/
+    },[])
+
+
     const router = createBrowserRouter([
         {
             path: RouteString.home,
@@ -32,13 +38,25 @@ export function App() {
         },
         {
             path: RouteString.logBook,
-            element: <LogBooks />,
-            errorElement: <ErrorPage />
+            element: <LogEvents />,
+            errorElement: <ErrorPage />,
+            children: [
+                {
+                    path: RouteString.existingBooks,
+                    element: <ExistingBooks />
+                },
+                {
+                    path: RouteString.addNewBooks,
+                    element: <AddNewBook />
+                }
+            ]
         }
     ]);
     return (
         <>
-            <RouterProvider router={router} />
+            <DndProvider backend={HTML5Backend}>
+                <RouterProvider router={router} />
+            </DndProvider>
         </>
     )
 }

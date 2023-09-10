@@ -1,0 +1,15 @@
+import {ADD_ITEM,  DELETE_INDI} from "../String/itemsString"
+
+export function addItem (obj) {
+    return {
+        type: ADD_ITEM,
+        payload: obj
+    }
+}
+
+export function deleteInditem(obj) {
+    return {
+        type: DELETE_INDI,
+        payload: obj
+    }
+}
